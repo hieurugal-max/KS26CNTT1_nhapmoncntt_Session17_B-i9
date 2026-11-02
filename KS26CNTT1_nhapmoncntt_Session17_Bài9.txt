@@ -1,0 +1,73 @@
+BÀI 9: THIẾT KẾ KHÔNG GIAN ĐA PROFILE VÀ KIẾN TRÚC BOOKMARK CHO TRẠM KHÁM BỆNH
+PHẦN 1: BÁO CÁO PHÂN TÍCH KIẾN TRÚC ĐA PROFILE
+1. Nguyên nhân xảy ra xung đột phiên đăng nhập (Session Conflict)
+Khi tất cả nhân viên sử dụng chung một Profile Chrome, dữ liệu trình duyệt được lưu trong cùng một thư mục User Data. Trong đó, Cookies lưu thông tin phiên đăng nhập của tài khoản.
+
+Khi bác sĩ và thực tập sinh đăng nhập các tài khoản khác nhau trên cùng hệ thống, phiên đăng nhập có thể bị thay thế hoặc mất hiệu lực, khiến bác sĩ bị đăng xuất giữa lúc làm việc.
+
+Giải pháp: Tạo các Profile riêng biệt, mỗi Profile có dữ liệu Cookies, History và Bookmarks độc lập để tránh sử dụng chung phiên đăng nhập.
+2. Thiết kế mô hình 3 Profile
+Profile 1: WORK (Công việc)
+- Mục đích: Dành cho bác sĩ và điều dưỡng thực hiện công việc tại phòng khám.
+- Màu Theme: Xanh dương.
+- Cookies: Lưu phiên đăng nhập CarePulse và cổng nghiệp vụ.
+- History: Lưu lịch sử truy cập công việc.
+- Bookmarks: Lưu các trang khám chữa bệnh, BHYT và tra cứu thuốc.
+- Extensions: Chỉ cài tiện ích phục vụ công việc.
+Profile 2: PERSONAL (Cá nhân)
+- Mục đích: Sử dụng cho nhu cầu cá nhân của nhân viên.
+- Màu Theme: Tím.
+- Cookies: Lưu tài khoản cá nhân.
+- History: Lưu lịch sử duyệt web cá nhân.
+- Bookmarks: Lưu Gmail, Facebook và YouTube.
+- Extensions: Các tiện ích cá nhân.
+Profile 3: SANDBOX/TEST (Thử nghiệm)
+- Mục đích: Dành cho sinh viên thực tập kiểm tra website và thực hành.
+- Màu Theme: Cam.
+- Cookies: Lưu tài khoản thử nghiệm.
+- History: Lưu lịch sử kiểm thử.
+- Bookmarks: Lưu tài liệu hướng dẫn và website thực hành.
+- Extensions: Chỉ cài tiện ích cần thiết cho kiểm thử
+
+
+
+PHẦN 2: THIẾT KẾ BOOKMARK VÀ QUY TRÌNH AN TOÀN
+3. Xây dựng cây thư mục Bookmark
+Nhấn Ctrl + Shift + O để mở Bookmark Manager và tạo 3 thư mục:
+
+ 01_CarePulse_Clinic
+- CarePulse – Hệ thống quản lý khám bệnh.
+- Cổng BHYT – Tra cứu bảo hiểm y tế.
+- Cổng thông tin Bộ Y tế – Tra cứu thông tin chuyên ngành.
+ 02_Pharma_Portal
+- Dược thư Quốc gia Việt Nam – Tra cứu thông tin thuốc.
+- Cục Quản lý Dược – Tra cứu thông tin dược phẩm.
+- DrugBank – Tra cứu hoạt chất và dược lý.
+ 03_Medical_Tools
+- Google Dịch – Hỗ trợ dịch thuật.
+- Google Scholar – Tìm kiếm tài liệu khoa học.
+- PubMed – Tra cứu nghiên cứu y học.
+4. Áp dụng Favicon-Only
+Thực hiện với 4 website: CarePulse, Cổng BHYT, Dược thư Quốc gia và Google Dịch.
+
+Các bước thực hiện:
+- Bước 1: Mở website cần lưu.
+- Bước 2: Nhấn Ctrl + D để thêm Bookmark.
+- Bước 3: Chọn lưu vào Thanh dấu trang.
+- Bước 4: Nhấn chuột phải vào Bookmark, chọn Chỉnh sửa.
+- Bước 5: Xóa tên website, chỉ giữ lại biểu tượng.
+- Bước 6: Nhấn Lưu.
+
+5. Xử lý tình huống an ninh
+Khi đoàn thanh tra hoặc khách mượn máy trong 30 phút, nhân viên nên sử dụng Guest Profile (Hồ sơ khách) thay vì Incognito.
+
+Lý do:
+- Không sử dụng dữ liệu và tài khoản của nhân viên.
+- Không hiển thị Bookmark và lịch sử cá nhân.
+- Dữ liệu duyệt web của khách được xóa khi đóng phiên Guest.
+- Hạn chế nguy cơ người khác truy cập nhầm tài khoản phòng khám.
+Cảnh báo về Cloud Sync:
+- Không bật đồng bộ tài khoản Google cá nhân trên máy tính dùng chung.
+- Không đồng bộ mật khẩu và dữ liệu cá nhân lên máy trạm.
+- Không lưu thông tin bệnh nhân vào tài khoản Google cá nhân.
+- Phải đăng xuất tài khoản nghiệp vụ sau khi kết thúc ca trực.
