@@ -23,7 +23,7 @@ Profile 2: PERSONAL (Cá nhân)
 - History: Lưu lịch sử duyệt web cá nhân.
 - Bookmarks: Lưu Gmail, Facebook và YouTube.
 - Extensions: Các tiện ích cá nhân.
-- 
+  
 Profile 3: SANDBOX/TEST (Thử nghiệm)
 - Mục đích: Dành cho sinh viên thực tập kiểm tra website và thực hành.
 - Màu Theme: Cam.
