@@ -1,4 +1,5 @@
 BÀI 9: THIẾT KẾ KHÔNG GIAN ĐA PROFILE VÀ KIẾN TRÚC BOOKMARK CHO TRẠM KHÁM BỆNH
+
 PHẦN 1: BÁO CÁO PHÂN TÍCH KIẾN TRÚC ĐA PROFILE
 1. Nguyên nhân xảy ra xung đột phiên đăng nhập (Session Conflict)
 Khi tất cả nhân viên sử dụng chung một Profile Chrome, dữ liệu trình duyệt được lưu trong cùng một thư mục User Data. Trong đó, Cookies lưu thông tin phiên đăng nhập của tài khoản.
